@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sergei Papysev — AI Automation Engineer</title>
+    <meta name="description" content="AI Automation Engineer specializing in AI-powered bots, dashboards, and trading systems. Full-cycle delivery from idea to production.">
+    <meta name="keywords" content="AI automation, Telegram bots, trading bots, business dashboards, Python developer, freelance engineer">
+    <meta property="og:title" content="Sergei Papysev — AI Automation Engineer">
+    <meta property="og:description" content="I build AI-powered bots, dashboards, and automation systems that generate revenue.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sergei Papysev — AI Automation Engineer">
+    <meta name="twitter:description" content="I build AI-powered bots, dashboards, and automation systems that generate revenue.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sergei Papysev",
+        "jobTitle": "AI Automation Engineer",
+        "url": "https://sergo665.github.io",
+        "email": "sergejpapysev@gmail.com",
+        "sameAs": [
+            "https://github.com/Sergo665",
+            "https://t.me/sergo665"
+        ],
+        "knowsAbout": ["AI Automation", "Telegram Bots", "Trading Systems", "Business Intelligence", "Python", "Django", "FastAPI"]
+    }
+    </script>
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0a0a1a;
+            --bg-card: #111127;
+            --bg-card-hover: #16163a;
+            --text: #e4e4f0;
+            --text-dim: #8888a8;
+            --accent-1: #7c3aed;
+            --accent-2: #3b82f6;
+            --gradient: linear-gradient(135deg, #7c3aed, #3b82f6);
+            --gradient-soft: linear-gradient(135deg, rgba(124,58,237,0.15), rgba(59,130,246,0.15));
+            --border: rgba(124,58,237,0.2);
+            --radius: 16px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1rem 2rem;
+            background: rgba(10,10,26,0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(124,58,237,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 0.6rem 2rem;
+            background: rgba(10,10,26,0.95);
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 1.1rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-bottom: 3rem;
+        }
+
+        /* HERO */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding-top: 5rem;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 40%, rgba(124,58,237,0.12) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 60%, rgba(59,130,246,0.1) 0%, transparent 50%);
+            animation: bgPulse 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes bgPulse {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(-2%, -1%) scale(1.05); }
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(124,58,237,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(124,58,237,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.2rem;
+            border-radius: 100px;
+            background: var(--gradient-soft);
+            border: 1px solid var(--border);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-dim);
+            margin-bottom: 2rem;
+        }
+
+        .hero-badge .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #22c55e;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .hero-name {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        .hero-name .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-title {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            color: var(--text-dim);
+            font-weight: 400;
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 2rem;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(124,58,237,0.3);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 6px 30px rgba(124,58,237,0.5);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gradient-soft);
+            border-color: var(--accent-1);
+            transform: translateY(-2px);
+        }
+
+        /* SERVICES */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            transition: all 0.4s ease;
+        }
+
+        .service-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--accent-1);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 40px rgba(124,58,237,0.15);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--gradient-soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* PROJECTS */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent-1);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(124,58,237,0.12);
+        }
+
+        .project-header {
+            height: 180px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-header-bg {
+            position: absolute;
+            inset: 0;
+        }
+
+        .project-header-bg.p1 {
+            background: linear-gradient(135deg, #1a0533 0%, #0d1b3e 50%, #0a2540 100%);
+        }
+        .project-header-bg.p2 {
+            background: linear-gradient(135deg, #0a2540 0%, #1a0533 50%, #2d0a3e 100%);
+        }
+        .project-header-bg.p3 {
+            background: linear-gradient(135deg, #2d0a3e 0%, #0d1b3e 50%, #1a0533 100%);
+        }
+        .project-header-bg.p4 {
+            background: linear-gradient(135deg, #0d1b3e 0%, #0a2540 50%, #1a0533 100%);
+        }
+
+        .project-header-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.15;
+        }
+
+        .project-header-pattern.grid-pattern {
+            background-image:
+                linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .project-header-pattern.dots-pattern {
+            background-image: radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .project-header-pattern.diagonal-pattern {
+            background-image: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 20px,
+                rgba(255,255,255,0.05) 20px,
+                rgba(255,255,255,0.05) 21px
+            );
+        }
+
+        .project-header-pattern.wave-pattern {
+            background: repeating-linear-gradient(
+                -45deg,
+                transparent,
+                transparent 15px,
+                rgba(255,255,255,0.04) 15px,
+                rgba(255,255,255,0.04) 16px
+            );
+        }
+
+        .project-header-icon {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 2rem;
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(124,58,237,0.4);
+        }
+
+        .project-header-icon svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .project-type-badge {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            padding: 0.35rem 0.85rem;
+            border-radius: 100px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .project-body {
+            padding: 2rem;
+        }
+
+        .project-body h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-stack span {
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            background: var(--gradient-soft);
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--text-dim);
+        }
+
+        .project-body .desc {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+
+        .project-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            margin-bottom: 0.4rem;
+        }
+
+        .project-features li::before {
+            content: '';
+            flex-shrink: 0;
+            margin-top: 6px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gradient);
+        }
+
+        .project-metric {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            background: var(--gradient-soft);
+            border: 1px solid var(--border);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .project-metric svg {
+            width: 16px;
+            height: 16px;
+            color: var(--accent-1);
+        }
+
+        /* TECH STACK */
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+
+        .tech-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.3rem;
+            border-radius: 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .tech-badge:hover {
+            border-color: var(--accent-1);
+            background: var(--bg-card-hover);
+            transform: translateY(-2px);
+        }
+
+        .tech-badge svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* WHY ME */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .why-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            transition: all 0.4s ease;
+        }
+
+        .why-card:hover {
+            background: var(--bg-card-hover);
+            transform: translateY(-4px);
+        }
+
+        .why-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 1rem;
+            opacity: 0.3;
+        }
+
+        .why-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .why-card p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* CONTACT */
+        #contact {
+            text-align: center;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            border-color: var(--accent-1);
+            background: var(--bg-card-hover);
+            transform: translateY(-2px);
+        }
+
+        .contact-link svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .contact-cta {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(124,58,237,0.1);
+            color: var(--text-dim);
+            font-size: 0.85rem;
+        }
+
+        /* ANIMATIONS */
+        .animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-delay-1 { transition-delay: 0.1s; }
+        .animate-delay-2 { transition-delay: 0.2s; }
+        .animate-delay-3 { transition-delay: 0.3s; }
+        .animate-delay-4 { transition-delay: 0.4s; }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            section {
+                padding: 4rem 1.25rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background: rgba(10,10,26,0.98);
+                backdrop-filter: blur(20px);
+                padding: 1.5rem 2rem;
+                gap: 1.2rem;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-name {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav id="navbar">
+    <span class="nav-logo">SP</span>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#stack">Tech Stack</a></li>
+        <li><a href="#why">Why Me</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+    <div class="hero-bg">
+        <div class="hero-grid"></div>
+    </div>
+    <div class="hero-badge animate">
+        <span class="dot"></span>
+        Available for projects
+    </div>
+    <h1 class="hero-name animate animate-delay-1">
+        Sergei Papysev<br>
+        <span class="gradient-text">AI Automation Engineer</span>
+    </h1>
+    <p class="hero-title animate animate-delay-2">
+        I build AI-powered bots, dashboards, and automation systems that generate revenue
+    </p>
+    <div class="hero-buttons animate animate-delay-3">
+        <a href="#projects" class="btn btn-primary">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 12l5-5 4 4 8-8"/><path d="M10 3h8v8"/></svg>
+            View My Work
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            Get in Touch
+        </a>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+    <p class="section-label animate">What I Do</p>
+    <h2 class="section-title animate animate-delay-1">Specialized in AI-Driven Systems</h2>
+    <p class="section-subtitle animate animate-delay-2">Building production-grade automation that works 24/7</p>
+
+    <div class="services-grid">
+        <div class="service-card animate animate-delay-1">
+            <div class="service-icon">
+                <svg fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3>AI Chatbots & Telegram Bots</h3>
+            <p>Custom AI-powered bots with payment integration, user funnels, and analytics. Built 5+ production bots serving real users.</p>
+        </div>
+        <div class="service-card animate animate-delay-2">
+            <div class="service-icon">
+                <svg fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <h3>Business Intelligence Dashboards</h3>
+            <p>Full-stack analytics dashboards with real-time data, KPI tracking, and team management features.</p>
+        </div>
+        <div class="service-card animate animate-delay-3">
+            <div class="service-icon">
+                <svg fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3>Trading & Automation Systems</h3>
+            <p>Algorithmic trading bots with backtesting frameworks, risk management, and live execution on DEX platforms.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <p class="section-label animate">Featured Projects</p>
+    <h2 class="section-title animate animate-delay-1">Real Systems in Production</h2>
+    <p class="section-subtitle animate animate-delay-2">Not concepts or prototypes. Live systems generating real results.</p>
+
+    <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card animate">
+            <div class="project-header">
+                <div class="project-header-bg p1"></div>
+                <div class="project-header-pattern grid-pattern"></div>
+                <span class="project-type-badge">Multi-Agent System</span>
+                <div class="project-header-icon">
+                    <svg fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+            </div>
+            <div class="project-body">
+                <h3>TG-Factory</h3>
+                <div class="project-stack">
+                    <span>Python</span><span>aiogram 3</span><span>FastAPI</span><span>OpenRouter API</span><span>Docker</span><span>Playwright</span>
+                </div>
+                <p class="desc">A production-grade system for launching Telegram bots at scale. 8 specialized AI agents handle the full pipeline: trend analysis, code generation, content creation, deployment, advertising, and analytics. Each business hypothesis goes from idea to live bot in 2-3 days.</p>
+                <ul class="project-features">
+                    <li>Multi-agent pipeline (8 agents)</li>
+                    <li>Built-in payments (Telegram Stars)</li>
+                    <li>Automated ad campaigns (TG Ads, Yandex Direct)</li>
+                    <li>Analytics dashboard with Chart.js</li>
+                    <li>Template system for rapid bot deployment</li>
+                </ul>
+                <div class="project-metric">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    5+ bots launched, 2-3 day cycle per hypothesis
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card animate animate-delay-1">
+            <div class="project-header">
+                <div class="project-header-bg p2"></div>
+                <div class="project-header-pattern dots-pattern"></div>
+                <span class="project-type-badge">Trading Bot + Dashboard</span>
+                <div class="project-header-icon">
+                    <svg fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+            </div>
+            <div class="project-body">
+                <h3>ApexVaults</h3>
+                <div class="project-stack">
+                    <span>Python</span><span>Apex Protocol SDK</span><span>FastAPI</span><span>pandas/numpy</span><span>SQLite</span><span>Chart.js</span>
+                </div>
+                <p class="desc">Multi-strategy automated trading system for Apex Protocol DEX (zkSync). Each strategy operates as an isolated vault with independent API keys, capital allocation, and dynamic risk management. Includes a sophisticated backtesting lab with 198+ hypothesis-driven tests.</p>
+                <ul class="project-features">
+                    <li>Multi-vault architecture (isolated strategies)</li>
+                    <li>Dynamic risk sizing (1% TVL per trade)</li>
+                    <li>Backtesting lab (198+ tests, Sharpe-optimized)</li>
+                    <li>Real-time web dashboard with PnL tracking</li>
+                    <li>Telegram alerts for all trades</li>
+                </ul>
+                <div class="project-metric">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M1 12l5-5 4 4 8-8"/><path d="M10 3h8v8"/></svg>
+                    Sharpe 2.77, 7 pairs, 24/7 live execution
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card animate animate-delay-2">
+            <div class="project-header">
+                <div class="project-header-bg p3"></div>
+                <div class="project-header-pattern diagonal-pattern"></div>
+                <span class="project-type-badge">Consumer AI Bot</span>
+                <div class="project-header-icon">
+                    <svg fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+            </div>
+            <div class="project-body">
+                <h3>AI Tarot Bot</h3>
+                <div class="project-stack">
+                    <span>Python</span><span>aiogram 3</span><span>OpenRouter (Gemini)</span><span>Telegram Stars</span><span>SQLite</span>
+                </div>
+                <p class="desc">A freemium Telegram bot that uses AI to provide personalized card readings. Features 4 themed decks (120 AI-generated cards), FSM-based user flows, payment integration via Telegram Stars, and A/B testing infrastructure for ad campaigns.</p>
+                <ul class="project-features">
+                    <li>LLM-powered personalization (Gemini 2.0)</li>
+                    <li>Telegram Stars payment integration</li>
+                    <li>FSM funnels with conversion tracking</li>
+                    <li>4 themed card decks (120 AI-generated images)</li>
+                    <li>A/B testing for 5 parallel ad campaigns</li>
+                </ul>
+                <div class="project-metric">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    Freemium model, 85 Stars per reading
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card animate animate-delay-3">
+            <div class="project-header">
+                <div class="project-header-bg p4"></div>
+                <div class="project-header-pattern wave-pattern"></div>
+                <span class="project-type-badge">Business Intelligence</span>
+                <div class="project-header-icon">
+                    <svg fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                </div>
+            </div>
+            <div class="project-body">
+                <h3>SunRoom Dashboard</h3>
+                <div class="project-stack">
+                    <span>Django 4.2</span><span>MySQL</span><span>Bootstrap 5</span><span>Chart.js</span><span>BlueSales CRM API</span>
+                </div>
+                <p class="desc">A comprehensive business analytics dashboard for a retail company. Integrates with CRM via live API, features 7 complex sections including revenue analytics, manager performance tracking, shift scheduling, and a gamified daily challenges system.</p>
+                <ul class="project-features">
+                    <li>Multi-database architecture (MySQL + SQLite)</li>
+                    <li>Real-time CRM API integration (5-min cache)</li>
+                    <li>21-column profitability reports</li>
+                    <li>Gamified daily challenges with rewards</li>
+                    <li>Role-based access control (5 roles)</li>
+                </ul>
+                <div class="project-metric">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    13 daily active users, 7 analytics sections
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TECH STACK -->
+<section id="stack">
+    <p class="section-label animate">Tech Stack</p>
+    <h2 class="section-title animate animate-delay-1" style="text-align:center;">Tools I Work With</h2>
+    <p class="section-subtitle animate animate-delay-2" style="text-align:center;margin-left:auto;margin-right:auto;">Battle-tested technologies chosen for reliability and speed</p>
+
+    <div class="tech-grid animate animate-delay-3">
+        <div class="tech-badge">
+            <svg viewBox="0 0 24 24" fill="#3776AB"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.5 4h1a2 2 0 012 2v3h-5V6a2 2 0 012-2zm4.5 14h-9a2 2 0 01-2-2v-3h5v1h3v-1h5v3a2 2 0 01-2 2z"/></svg>
+            Python
+        </div>
+        <div class="tech-badge">
+            <svg viewBox="0 0 24 24" fill="#092E20"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2V7h2v10z"/></svg>
+            Django
+        </div>
+        <div class="tech-badge">
+            <svg viewBox="0 0 24 24" fill="#009688"><path d="M12 2L2 19h20L12 2zm0 4l7 11H5l7-11z"/></svg>
+            FastAPI
+        </div>
+        <div class="tech-badge">
+            <svg viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.28-.02-.12.02-2.02 1.28-5.69 3.77-.54.37-1.03.55-1.47.54-.48-.01-1.41-.27-2.1-.5-.85-.28-1.52-.42-1.46-.89.03-.25.38-.5 1.04-.76 4.09-1.78 6.82-2.96 8.19-3.52 3.9-1.62 4.71-1.9 5.24-1.91.12 0 .37.03.54.17.14.12.18.28.2.45-.01.06.01.24 0 .38z"/></svg>
+            aiogram
+        </div>
+        <div class="tech-badge">
+            <svg viewBox="0 0 24 24" fill="#F7DF1E"><rect width="24" height="24" rx="3" fill="#F7DF1E"/><path d="M6 18.3l1.9-1.2c.4.6.7 1.2 1.5 1.2.8 0 1.3-.3 1.3-1.5V9h2.3v7.8c0 2.5-1.5 3.6-3.6 3.6-1.9 0-3-.9-3.4-2.1zm8.1-.3l1.9-1.1c.5.8 1.1 1.4 2.2 1.4.9 0 1.5-.5 1.5-1.1 0-.8-.6-1.1-1.6-1.6l-.6-.2c-1.6-.7-2.6-1.5-2.6-3.3 0-1.6 1.3-2.9 3.2-2.9 1.4 0 2.4.5 3.1 1.8l-1.7 1.1c-.4-.7-.8-.9-1.4-.9-.6 0-1.1.4-1.1.9 0 .6.4.9 1.3 1.3l.6.2c1.9.8 2.9 1.6 2.9 3.4 0 1.9-1.5 3-3.6 3-2 0-3.3-1-3.9-2.2z" fill="#000"/></svg>
+            JavaScript
+        </div>
+        <div class="tech-badge">
+            <svg viewBox="0 0 24 24" fill="#E34F26"><path d="M1.5 0h21l-1.91 21.56L11.97 24l-8.55-2.44L1.5 0zm7.09 9.68l-.26-2.93h8.36l.26-2.93H5.17l.78 8.79h9.02l-.33 3.56-2.67.72-2.67-.72-.17-1.93H6.2l.33 3.79L12 19.53l5.47-1.54.73-8.31H8.59z"/></svg>
+            HTML/CSS
+        </div>
+        <div class="tech-badge">
+            <svg viewBox="0 0 24 24" fill="#4479A1"><circle cx="12" cy="12" r="10" fill="#4479A1"/><path d="M7 8h10v2H7zm0 3h10v2H7zm0 3h7v2H7z" fill="#fff"/></svg>
+            MySQL
+        </div>
+        <div class="tech-badge">
+            <svg viewBox="0 0 24 24" fill="#003B57"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.14-7-7 3.14-7 7-7z"/><circle cx="12" cy="12" r="3" fill="#003B57"/></svg>
+            SQLite
+        </div>
+        <div class="tech-badge">
+            <svg viewBox="0 0 24 24" fill="#2496ED"><path d="M13.98 11.08h2.12v1.94h-2.12zm-2.54 0h2.12v1.94H11.44zm-2.54 0h2.12v1.94H8.9zm-2.54 0h2.12v1.94H6.36zm2.54-2.33h2.12v1.94H8.9zm2.54 0h2.12v1.94h-2.12zm2.54 0h2.12v1.94h-2.12zm-2.54-2.33h2.12v1.94h-2.12zm2.54 0h2.12v1.94h-2.12zM22 12.7c-.56-.33-1.17-.49-1.82-.49-.19 0-.38.02-.57.05-.24-1.02-.93-1.89-1.82-2.48l-.37-.24-.25.36c-.32.47-.5 1-.54 1.56-.04.42.04.82.22 1.19-.48.28-1.26.43-1.88.43H1.7l-.05.41c-.12 1.13.08 2.27.58 3.3.55 1.11 1.4 1.92 2.52 2.4 1.25.54 2.62.8 4.1.8 1.53 0 3.02-.27 4.41-.8a11.78 11.78 0 003.44-2.16c1.12-1.06 2-2.34 2.64-3.8.87.01 1.73-.2 2.44-.72l.3-.2-.23-.34c-.43-.63-1.07-1.04-1.85-1.27z"/></svg>
+            Docker
+        </div>
+        <div class="tech-badge">
+            <svg viewBox="0 0 24 24" fill="#7c3aed"><circle cx="12" cy="12" r="10" fill="#7c3aed"/><path d="M8 9l4-3 4 3v6l-4 3-4-3V9z" fill="none" stroke="#fff" stroke-width="1.5"/></svg>
+            OpenRouter API
+        </div>
+        <div class="tech-badge">
+            <svg viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.16.16 0 00-.07-.2c-.08-.06-.19-.04-.28-.02-.12.02-2.02 1.28-5.69 3.77-.54.37-1.03.55-1.47.54-.48-.01-1.41-.27-2.1-.5-.85-.28-1.52-.42-1.46-.89.03-.25.38-.5 1.04-.76 4.09-1.78 6.82-2.96 8.19-3.52 3.9-1.62 4.71-1.9 5.24-1.91.12 0 .37.03.54.17.14.12.18.28.2.45-.01.06.01.24 0 .38z"/></svg>
+            Telegram API
+        </div>
+        <div class="tech-badge">
+            <svg viewBox="0 0 24 24" fill="#FF6384"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 2c1.1 0 2.1.24 3.03.66L12 12V4zm-3.03.66L12 12 5.66 7.97A8.01 8.01 0 018.97 4.66zM4 12c0-1.1.24-2.1.66-3.03L12 12H4zm.66 3.03L12 12l-3.03 5.34A8.01 8.01 0 014.66 15.03zM12 20c-1.1 0-2.1-.24-3.03-.66L12 12v8zm3.03-.66L12 12l7.34 3.03a8.01 8.01 0 01-3.31 4.31zM20 12h-8l7.34-3.03c.42.93.66 1.93.66 3.03z"/></svg>
+            Chart.js
+        </div>
+        <div class="tech-badge">
+            <svg viewBox="0 0 24 24" fill="#150458"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14H8V8h2v8zm3 0h-2V8h2v8zm3 0h-2V8h2v8z"/></svg>
+            pandas / numpy
+        </div>
+        <div class="tech-badge">
+            <svg viewBox="0 0 24 24" fill="#F05032"><path d="M23.55 11.22l-10.8-10.8a1.5 1.5 0 00-2.12 0L8.15 2.9l2.68 2.68a1.78 1.78 0 012.25 2.27l2.58 2.58a1.78 1.78 0 11-1.07 1.01l-2.4-2.4v6.32a1.78 1.78 0 11-1.47-.09V9.34a1.78 1.78 0 01-.97-2.34L7.09 4.34.45 11a1.5 1.5 0 000 2.12l10.8 10.8a1.5 1.5 0 002.12 0l10.18-10.18a1.5 1.5 0 000-2.12z"/></svg>
+            Git
+        </div>
+    </div>
+</section>
+
+<!-- WHY ME -->
+<section id="why">
+    <p class="section-label animate">Why Work With Me</p>
+    <h2 class="section-title animate animate-delay-1">What Sets Me Apart</h2>
+    <p class="section-subtitle animate animate-delay-2">Not just code. Production-grade systems that deliver.</p>
+
+    <div class="why-grid">
+        <div class="why-card animate animate-delay-1">
+            <div class="why-number">01</div>
+            <h3>Full-Cycle Delivery</h3>
+            <p>From idea to production deployment. I don't just write code -- I build products that run 24/7 on real servers.</p>
+        </div>
+        <div class="why-card animate animate-delay-2">
+            <div class="why-number">02</div>
+            <h3>AI-Native Approach</h3>
+            <p>Every project leverages AI: LLM-powered features, automated content generation, intelligent user flows.</p>
+        </div>
+        <div class="why-card animate animate-delay-3">
+            <div class="why-number">03</div>
+            <h3>Results-Driven</h3>
+            <p>Each project is built to generate measurable business outcomes: revenue, automation, actionable analytics.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <p class="section-label animate">Get in Touch</p>
+    <h2 class="section-title animate animate-delay-1" style="text-align:center;">Ready to automate your business?</h2>
+    <p class="contact-cta animate animate-delay-2">Let's talk about how AI can work for you.</p>
+
+    <div class="contact-links animate animate-delay-3">
+        <a href="mailto:sergejpapysev@gmail.com" class="contact-link">
+            <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            sergejpapysev@gmail.com
+        </a>
+        <a href="https://t.me/sergo665" target="_blank" rel="noopener" class="contact-link">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.16.16 0 00-.07-.2c-.08-.06-.19-.04-.28-.02-.12.02-2.02 1.28-5.69 3.77-.54.37-1.03.55-1.47.54-.48-.01-1.41-.27-2.1-.5-.85-.28-1.52-.42-1.46-.89.03-.25.38-.5 1.04-.76 4.09-1.78 6.82-2.96 8.19-3.52 3.9-1.62 4.71-1.9 5.24-1.91.12 0 .37.03.54.17.14.12.18.28.2.45-.01.06.01.24 0 .38z"/></svg>
+            @sergo665
+        </a>
+        <a href="https://github.com/Sergo665" target="_blank" rel="noopener" class="contact-link">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.43 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016.02 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58C20.57 21.8 24 17.31 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+        </a>
+    </div>
+
+    <a href="mailto:sergejpapysev@gmail.com?subject=Project%20Inquiry&body=Hi%20Sergei%2C%0A%0AI'd%20like%20to%20discuss%20a%20project%20with%20you.%0A%0A" class="btn btn-primary animate animate-delay-4">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        Send me a message
+    </a>
+</section>
+
+<footer>
+    <p>&copy; 2026 Sergei Papysev. Built with purpose.</p>
+</footer>
+
+<script>
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+
+    // Nav scroll effect
+    const navbar = document.getElementById('navbar');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        navbar.classList.toggle('scrolled', scrollY > 50);
+        lastScroll = scrollY;
+    });
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+
+    // Close mobile nav on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+        });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = document.querySelector(anchor.getAttribute('href'));
+            if (target) {
+                const offset = 80;
+                const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }
+        });
+    });
+</script>
+</body>
+</html>
